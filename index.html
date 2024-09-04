@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <section class="min-h-screen flex items-center flex-col bg-[#1E71FF]">
+        <nav class="w-full flex items-center justify-between px-6 py-3">
+            <div>
+                <a href="#"><span class="text-[26px] font-semibold text-[#FFFFFF]">chat</span><span
+                        class="text-[26px] font=[275] text-[#FFFFFF]">app</span></a>
+            </div>
+            <ul
+                class="flex gap-4 items-center md:relative fixed max-md:w-full z-10 max-md:translate-x-full transition-all duration-300 ease-linear left-0 top-0 max-md:flex-col max-md:justify-center max-md:*:items-center">
+                <li><a class="font-medium text-sm text-white" href="#">home</a></li>
+                <li><a class="font-medium text-sm text-white" href="#">Services</a></li>
+                <li><a class="font-medium text-sm text-white" href="#">Contact</a></li>
+                <li><a class="font-medium text-sm text-white" href="#">Log In</a></li>
+                <button class="font-medium text-sm text-white">Try It Free</button>
+            </ul>
+        </nav>
+    </section>
+    <script>
+
+    </script>
+</body>
+
+</html>
