@@ -19,45 +19,88 @@
 </head>
 
 <body>
-    <section class="min-h-screen flex items-center flex-col bg-[#1E71FF]">
-        <nav class="w-full flex items-center justify-between px-20 py-3">
-            <div>
-                <a href="#"><span class="text-[26px] font-semibold text-[#FFFFFF]">chat</span><span
-                        class="text-[26px] font=[275] text-[#FFFFFF]">app</span></a>
-            </div>
-            <ul id="mobile_nav" class="flex gap-4 items-center md:relative fixed max-md:w-full
-                 z-10 max-md:translate-x-full transition-all duration-300 ease-linear
-                  left-0 top-0 max-md:flex-col max-md:justify-center max-md:*:items-center">
-                <li><a class="font-medium text-sm text-white" href="#">home</a></li>
-                <li><a class="font-medium text-sm text-white" href="#">Services</a></li>
-                <li><a class="font-medium text-sm text-white" href="#">Contact</a></li>
-                <li><a class="font-medium text-sm text-white" href="#">Log In</a></li>
-                <button class="font-medium text-sm text-white rounded-full bg-[#4B8DFF] px-5 py-3 ">Try It Free</button>
-            </ul>
-            <div class="relative z-20 flex gap-x-4">
-                <div class="relative size-10 border border-solid" id="togglebutton"></div>
-                <div class="absolute h-full w-full bg-green-400 top-0 transition-all duration-300 left-0 show_nav">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navbar</title>
+        <link rel="stylesheet" href="./src/input.css">
+        <link rel="stylesheet" href="./src/output.css">
+    </head>
+
+    <body>
+        <section class="min-h-screen flex items-center bg-[#1E71FF] flex-col">
+            <div class="container w-4/5">
+                <nav class="w-full flex items-center justify-between px-6 py-2">
+                    <div>
+                        <a href="#">
+                            <h2 class="font-semibold text-white text-[26px] font-['poppins']">chat<span
+                                    class="font-[275]">app</span>
+                            </h2>
+                        </a>
+                    </div>
+                    <ul id="mobile_navbar" class="flex gap-6 items-center lg:relative fixed max-lg:w-full max-md:h-full
+                         max-lg:bg-yellow-500 z-10 max-lg:translate-x-full left-0 top-0 max-lg:flex-col 
+                         max-lg:justify-center max-lg:items-center">
+                        <li><a href="#" class="font-medium text-white text-sm font-['Roboto'] ">Product</a></li>
+                        <li><a href="#" class="font-medium text-white text-sm font-['Roboto'] ">Services</a></li>
+                        <li><a href="#" class="font-medium text-white text-sm font-['Roboto'] ">Contact</a></li>
+                        <li><a href="#" class="font-medium text-white text-sm font-['Roboto'] ">Log In</a></li>
+                        <li><button
+                                class="px-5 py-2 rounded-full border border-sky-500 font-['Roboto'] font-medium text-sm text-white hover:bg-white hover:text-[#1E71FF] transition-all duration-300">Try
+                                It Free</button></li>
+                    </ul>
+                    <div class="relative z-20 flex gap-x-4 lg:hidden">
+                        <div class="relative size-8 rounded-[100px]" id="toggle_button">
+                            <div
+                                class="absolute h-full w-full bg-transparent border transition-all duration-300 show_nav">
+                            </div>
+                            <div
+                                class="absolute h-full w-full bg-green-500 transition-all duration-300 hide_nav opacity-0">
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="flex">
+                    <div class="w-1/2">
+                        <div class="max-w-[499px] h-[192px] pt-[90px]">
+                            <p class="text-white font-semibold text-[75px] mb-5">Have your best chat</p>
+                            <p class="text-white font-normal text-xl">Fast, easy & unlimited team chat.</p>
+                            <div class="flex gap-8">
+                                <button
+                                    class=" font-medium	text-base rounded-full w-[172px] h-[50px] border-[2px] text-white hover:bg-white hover:text-[#1E71FF] mt-[40px]">Try
+                                    it Free</button>
+                                <button
+                                    class=" font-medium	text-base rounded-full w-[172px] h-[50px] border-[2px] text-white hover:bg-white hover:text-[#1E71FF] mt-[40px]">Get
+                                    a Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/2">
+                        <img class="w-[585px] h-[543px] mt-5" src="./src/image/chat-app-pic.png" alt="">
+                    </div>
                 </div>
-                <div
-                    class="absolute h-full w-full bg-black top-0 transition-all duration-300 left-0 hide-nav opacity-0">
-                </div>
             </div>
-        </nav>
-    </section>
-    <script>
-        const nav = document.getElementById("mobile_nav")
-        const toggleButton = document.getElementById("toggle_button")
-        const toggleButtonShowNav = document.getElementById("toggle_button .show_nav")
-        const toggleButtonCloseNav = document.getElementById("toggle_button .hide_nav")
-        toggleButton.addEventListener("Click",
-            function () {
-                nav.ClassList.toggle("max-md:translate-x-full")
-                toggleButtonShowNav.ClassList.toggle("opacity-0")
-                toggleButtonCloseNav.ClassList.toggle("opacity-0")
-                nav.ClassList.toggle("max-md:translate-x-full")
-            }
-        )
-    </script>
+        </section>
+        <script>
+            const nav = document.getElementById("mobile_navbar")
+            const toggleButton = document.getElementById("toggle_button")
+            const toggleButtonShowNav = document.querySelector("#toggle_button .show_nav")
+            const toggleButtonCloseNav = document.querySelector("#toggle_button .hide_nav")
+            toggleButton.addEventListener("click",
+                function () {
+                    nav.classList.toggle("max-lg:translate-x-full")
+                    toggleButtonShowNav.classList.toggle("opacity-0")
+                    toggleButtonCloseNav.classList.toggle("opacity-0")
+                    console.log("nav")
+                }
+            )
+        </script>
+    </body>
+
+    </html>
 </body>
 
 </html>
